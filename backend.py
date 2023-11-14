@@ -6,8 +6,7 @@ import pandas as pd
 from langchain.llms import OpenAI
 import os
 
-##os.environ["OPENAI_API_KEY"] = "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"
-# Load the BART model
+os.environ["OPENAI_API_KEY"] = "put your own openAI api key here"
 llm = OpenAI()
 
 
