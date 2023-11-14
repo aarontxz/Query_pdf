@@ -1,0 +1,167 @@
+body {
+  background-color: #001f3f; 
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.words {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+textarea#userInput1 {
+    width: 400px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+textarea#userInput2 {
+    display: block;
+    padding: 10px;
+    width: 600px;
+    height: 50px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+#submit {
+    margin-left: 5px;
+    margin-top: 40px;
+    height: 30px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #0099cc;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0088bb;
+}
+
+#output {
+  font-size: 18px;
+}
+
+#clickCount {
+  position: absolute;
+  top: 60px;
+  left: 10px;
+}
+
+#customButton {
+  /* Styles for Button 1 */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.file-upload {
+  display: flex;
+  align-items: center;
+}
+
+.file-upload input[type="file"] {
+  display: none;
+}
+
+.file-upload label {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.file-upload label:hover {
+  background-color: #45a049;
+}
+
+.file-upload input[type="submit"] {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.file-upload input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#fileoutputlist {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  background-color: lightblue;
+  border: 2px solid darkblue;
+  padding: 15px;
+  max-width: 300px;
+  overflow: auto;
+  color: darkslategrey
+}
+
+#selectedFileName {
+  margin-right: 10px;
+  color: grey;
+  background-color: #f0f0f0;
+  border: 1px solid grey; /* Add a grey border */
+  padding: 5px; /* Add some padding inside the border */
+}
+
+
+#uploadButton {
+  margin-top: 15px;
+  height: 20px; /* Adjust the height to your desired value */
+  width: 60px;
+}
+
+#output {
+  margin-top: 20px; /* Add some margin to create space */
+}
+
+#fileoutput {
+    border: 2px solid rgb(1, 1, 39); /* Add a white border */
+    padding: 10px; /* Add some padding */
+    background-color: rgb(148, 207, 227); /* Add a light gray background */
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    margin: 0 auto; /* Center horizontally */
+}

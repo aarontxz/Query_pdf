@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload your data</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='frontend.css') }}">
+</head>
+<body>
+    <h1>PDF reader</h1>
+    <form id="uploadForm" enctype="multipart/form-data" onsubmit="submitForm(event)">
+    <div class="file-upload">
+        <div class="button-container">
+        <input type="file" id="fileUpload" name="fileUpload" onchange="displayFileName()">
+        <label for="fileUpload">Select a file</label>
+        </div>
+        <p id="selectedFileName"></p>
+    </div>
+    <input type="submit" value="Upload" id="uploadButton">
+  </form>
+  <textarea id="userInput1" placeholder="Context"></textarea>
+  <div class="container">
+    <form onsubmit="event.preventDefault(); dbQuery()">
+      <textarea id="userInput2" placeholder="Enter prompt"></textarea>
+      <button type="submit" id="submit">Submit</button>
+    </form>
+    <div id="output"></div>
+    <button id="customButton" onclick="countButtonClick()">Click me!</button>
+    <div id="clickCount"></div>
+  </div>
+  <div id="fileoutputlist">
+    <h2>Uploaded Files:</h2>
+    <ul id="fileList"></ul>
+  </div>  
+  <div class="words">
+    <p>RESULT</p>
+  </div>
+  <div id="fileoutput"> </div>
+  
+
+  <script src="{{ url_for('static', filename='frontend.js') }}"></script>
+</body>
+</html>
