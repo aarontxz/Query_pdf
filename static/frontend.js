@@ -1,11 +1,8 @@
-var clickCount = 0; // Variable to keep track of button clicks
-
 function dbQuery() {
-  var userInput1 = document.getElementById("userInput1").value;
   var userInput2 = document.getElementById("userInput2").value;
   var output = document.getElementById("output");
 
-  var concatenatedString = 'you are a bot that will be given a persona and a question answer the question based on the persona, persona: ' + userInput1 + '. question: ' + userInput2; // Concatenate the two strings
+  var concatenatedString = 'you are a bot that will be given a question, answer the question. question: ' + userInput2;
 
   fetch('/dbQuery', {
     method: 'POST',
@@ -21,12 +18,6 @@ function dbQuery() {
     .catch(error => {
       console.error('Error:', error);
     });
-}
-
-
-function countButtonClick() {
-  clickCount++;
-  document.getElementById("clickCount").textContent = "Button clicked " + clickCount + " times.";
 }
 
 function displayFileName() {
