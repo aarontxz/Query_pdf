@@ -13,4 +13,6 @@ Have python3.10 downloaded and install the following libraries
 
 - llama_index
 
+- numexpr
+
 run python3 backend.py and then find the application at your local host port 5000
