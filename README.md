@@ -15,6 +15,12 @@ Have python3.10 downloaded and install the following libraries
 
 - numexpr
 
+- pandas
+
+- json
+
+- flask
+
 run python3 backend.py and then find the application at your local host port 5000
 
 
