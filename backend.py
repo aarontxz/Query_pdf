@@ -5,9 +5,28 @@ from llama import create_tree_index_query_engine, create_list_index_query_engine
 import pandas as pd
 from langchain.llms import OpenAI
 import os
+from langchain.memory import ConversationBufferMemory
+from langchain.agents import initialize_agent
+from langchain.agents import load_tools
 
-os.environ["OPENAI_API_KEY"] = "put your own openAI api key here"
+memory = ConversationBufferMemory(memory_key="chat_history")
+os.environ["OPENAI_API_KEY"] = "put your own openAI api here"
+# Load the BART model
 llm = OpenAI()
+
+tools = load_tools(
+    ["llm-math"], 
+    llm=llm
+)
+
+conversational_agent = initialize_agent(
+    agent='conversational-react-description', 
+    tools = tools,
+    llm=llm,
+    verbose=True,
+    max_iterations=1,
+    memory=memory,
+)
 
 
 uploaded_files = []
@@ -37,19 +56,17 @@ def dbQuery():
     reply = db.query(user_input)
     reply = str(reply)
     prompt = 'relevant data will be provided, ' + user_input + ' relevant data: ' + str(reply)
-    full_sentence = llm.predict(prompt)
-    full_sentence = reply
+    full_sentence = conversational_agent(prompt)
     # Log user input and full sentence
     time = f"[{datetime.datetime.now()}]\n"
     first = f"prompt: {prompt}\n"
-    second = f"output: {full_sentence}\n"
+    second = f"conversation agent: {full_sentence}\n"
     with open('log.txt', 'a') as log_file:
         log_file.write(time)
         log_file.write(first)
         log_file.write(second)
         log_file.write('----------------------\n')
-
-    return jsonify({'full_sentence': full_sentence})
+    return jsonify({'full_sentence': full_sentence["output"]})
 
 
 @app.route('/upload', methods=['POST'])
