@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Upload your data</title>
+  <title>CarbonAI</title>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='frontend.css') }}">
 </head>
 <body>
-    <h1>PDF reader</h1>
+    <h1>Carbon Market Expert</h1>
     <form id="uploadForm" enctype="multipart/form-data" onsubmit="submitForm(event)">
     <div class="file-upload">
         <div class="button-container">
@@ -16,15 +16,12 @@
     </div>
     <input type="submit" value="Upload" id="uploadButton">
   </form>
-  <textarea id="userInput1" placeholder="Context"></textarea>
   <div class="container">
     <form onsubmit="event.preventDefault(); dbQuery()">
       <textarea id="userInput2" placeholder="Enter prompt"></textarea>
       <button type="submit" id="submit">Submit</button>
     </form>
     <div id="output"></div>
-    <button id="customButton" onclick="countButtonClick()">Click me!</button>
-    <div id="clickCount"></div>
   </div>
   <div id="fileoutputlist">
     <h2>Uploaded Files:</h2>
