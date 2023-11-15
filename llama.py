@@ -6,9 +6,10 @@ from typing import Optional, List, Mapping, Any
 from transformers import AutoModelForSeq2SeqLM
 import transformers
 from langchain.llms import OpenAI
+from api_key import OpenAIAPI
 import os
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] =  OpenAIAPI
 # Load the BART model
 llm = OpenAI()
 
