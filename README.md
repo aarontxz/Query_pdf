@@ -26,4 +26,4 @@ run python3 backend.py and then find the application at your local host port 500
 
 you should see this web app
 
-<img width="1085" alt="Screenshot 2023-12-23 at 8 19 16 PM" src="https://github.com/aarontxz/Query_pdf/assets/115057223/faadc0d1-9a39-4a80-9906-1c2a34085487">
+<img width="1299" alt="Screenshot 2023-12-23 at 8 24 13 PM" src="https://github.com/aarontxz/Query_pdf/assets/115057223/84fc7b16-a501-4157-a7b6-e7e4942b74e3">
